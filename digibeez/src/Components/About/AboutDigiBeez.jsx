@@ -91,7 +91,7 @@ const AboutDigiBeez = () => {
         spacing={2}
         justifyContent='center'
         sx={{
-          minHeight: '60vh', // Ensures that the container takes enough height for vertical centering
+          minHeight: '60vh', 
         }}
       >
         {/* Top 2 cards */}

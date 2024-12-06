@@ -52,7 +52,8 @@ function Navbar(props) {
       <AppBar
         component='nav'
         sx={{
-          backgroundImage: 'linear-gradient(to left, black, yellow)',
+          backgroundImage:
+            'radial-gradient(circle, #000000, #592a2a, #aa5934, #e79e25, #fff300);',
           boxShadow: 'none',
         }}
       >
