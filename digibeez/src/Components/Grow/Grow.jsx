@@ -47,7 +47,7 @@ const Grow = () => {
         paragraph
         sx={{
           fontSize: { xs: '0.9rem', sm: '1rem' },
-          mb: 6,
+          mb: 6, marginX:4
         }}
       >
         As since we are ‘Digital First’ in every aspect of our lives, approach,
