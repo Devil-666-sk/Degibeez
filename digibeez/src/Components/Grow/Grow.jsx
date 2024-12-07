@@ -20,24 +20,29 @@ const Grow = () => {
     { title: 'Upskills your Team', img: Img4 },
   ];
 
-  
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); 
-  const radius = isMobile ? 120 : isTablet ? 200 : 300; 
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  const radius = isMobile ? 120 : isTablet ? 200 : 300;
 
   return (
     <Container
       maxWidth='lg'
-      sx={{ textAlign: 'center', py: 8, mt: 2 }} 
+      sx={{
+        textAlign: 'center',
+        py: 8,
+        mt: 2,
+        padding: { xs: '6px', sm: 0 },
+        margin: { xs: '2px', sm: 0 }, 
+      }}
     >
       {/* Main Title */}
       <Typography
         variant='h4'
         gutterBottom
         sx={{
-          fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }, 
-          mb: 6, 
+          fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+          mb: 6,
         }}
       >
         How Can We Help You Grow
@@ -48,8 +53,8 @@ const Grow = () => {
         variant='body1'
         paragraph
         sx={{
-          fontSize: { xs: '0.9rem', sm: '1rem' }, 
-          mb: 6, 
+          fontSize: { xs: '0.9rem', sm: '1rem' },
+          mb: 6,
         }}
       >
         As since we are ‘Digital First’ in every aspect of our lives, approach,
@@ -65,10 +70,10 @@ const Grow = () => {
       <Box
         sx={{
           position: 'relative',
-          width: `${radius * 2}px`, 
-          height: `${radius * 2}px`, 
-          margin: '0 auto', 
-          mb: 10, 
+          width: `${radius * 2}px`,
+          height: `${radius * 2}px`,
+          margin: '0 auto',
+          mb: 10,
         }}
       >
         {/* Center Heading */}
@@ -85,7 +90,7 @@ const Grow = () => {
           <Typography
             variant='h5'
             sx={{
-              fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' }, 
+              fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' },
               fontWeight: 'bold',
               textShadow: '0px 5px 8px rgba(0,0,0,0.3)',
               marginTop: { xs: '40px', sm: '220px', md: '360px' },
@@ -96,9 +101,9 @@ const Grow = () => {
         </Box>
 
         {items.map((item, index) => {
-          const angle = (index / items.length) * 360; 
-          const x = radius * Math.cos((angle * Math.PI) / 180); 
-          const y = radius * Math.sin((angle * Math.PI) / 180); 
+          const angle = (index / items.length) * 360;
+          const x = radius * Math.cos((angle * Math.PI) / 180);
+          const y = radius * Math.sin((angle * Math.PI) / 180);
 
           return (
             <Box
@@ -108,7 +113,6 @@ const Grow = () => {
                 top: `calc(50% + ${y}px)`,
                 left: `calc(50% + ${x}px)`,
                 transform: 'translate(-50%, -50%)',
-
                 borderRadius: '50%',
                 padding: '10px',
                 textAlign: 'center',
