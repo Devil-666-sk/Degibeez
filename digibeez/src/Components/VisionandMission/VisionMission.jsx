@@ -36,11 +36,11 @@ const VisionMission = () => {
           fontWeight: 'bold',
           mb: 4,
 
-          marginTop: 50,
-          fontSize: { xs: '28px', md: '36px' },
+          marginTop: 37,
+          
 
           fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
- main
+
         }}
       >
         What We Are Up To
@@ -51,10 +51,10 @@ const VisionMission = () => {
         variant='body1'
         textAlign='center'
         sx={{
-          fontSize: { xs: '1rem', md: '1.2rem' },
+          fontSize: { xs: '0.9rem', sm: '1rem' },
           mb: 6,
           color: 'text.secondary',
-          marginX:10
+          marginX:{xs:5, sm:7, md:8, lg:5, xl:30}
 
         }}
       >
@@ -138,7 +138,7 @@ const VisionMission = () => {
                 variant='body1'
                 key={i}
                 sx={{
-                  fontSize: { xs: '1rem', md: '1.2rem' },
+                  fontSize: { xs: '0.9rem', sm: '1rem' },
                   mb: 2,
                 }}
               >

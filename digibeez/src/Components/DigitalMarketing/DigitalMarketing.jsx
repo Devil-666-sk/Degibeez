@@ -32,7 +32,7 @@ export default function DigitalMarketing() {
     return (
         <>
             <Box sx={{
-                marginTop:-15,
+                marginTop:-5,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -45,7 +45,7 @@ export default function DigitalMarketing() {
                 <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom:10}}>
                 Digital Marketing Process
                 </Typography>
-                    <Grid container spacing={6} justifyContent="center" alignItems="center" sx={{marginX:3}}>
+                    <Grid container spacing={13} justifyContent="center" alignItems="center" sx={{marginX:3}}>
                         <Grid item xs={6}>
                             <Item>
                                 <AnimatedImage

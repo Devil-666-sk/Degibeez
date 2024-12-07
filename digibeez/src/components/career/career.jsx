@@ -43,7 +43,7 @@ export default function Careers() {
 
         <Box
             sx={{
-                marginTop: -12,
+                marginTop: -5,
                 flexGrow: '1',
                 display: 'flex',
                 justifyContent: 'center',
@@ -60,13 +60,13 @@ export default function Careers() {
                     Careers
                 </Typography>
                 <Typography variant="body2" gutterBottom sx={{
-                    marginBottom: 10, marginX:3
+                    marginBottom: 10, marginX:3, fontSize: { xs: '0.9rem', sm: '1rem' } 
                 }}>
                     Digital marketing refers to a process of marketing brands to people through web-based platforms to achieve customer interaction. It involves tasks such as an SEO specialist, content producer, a social media officer, and data processor—professionals who combine creative and rational thinking. People in this filed always ensure that they innovate in technologies and trends in order to demonstrate the benefits of their innovation on organizational goals and objectives.
                 </Typography>
-                <Grid container spacing={6} justifyContent={'center'} sx={{marginX:5} }>
+                <Grid container spacing={10} justifyContent={'center'} sx={{marginX:5} }>
                     {cardData.map((card, index) => ( 
-                        <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
+                        <Grid item xs={12} sm={6} md={6}  key={index}>
                             <Card sx={{
                                 
                                 width: '100%',
