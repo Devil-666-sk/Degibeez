@@ -23,16 +23,16 @@ const AnimatedImage = styled('img')({
     maxHeight: 600,
     height: 'auto',
     objectFit: 'cover',
-    transition: 'transform 0.3s ease-in-out', // Smooth transition for the transform
+    transition: 'transform 0.3s ease-in-out',
     '&:hover': {
-        transform: 'scale(1.1)', // Scale up on hover
+        transform: 'scale(1.1)',
     },
 });
 export default function DigitalMarketing() {
     return (
         <>
             <Box sx={{
-                marginTop: { xs: 0, sm: 25, md: 30,  },
+                marginTop:-15,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -42,16 +42,16 @@ export default function DigitalMarketing() {
             }}>
                 <Box sx={{ width: '100%' , maxWidth:1200, marginBottom:10}}>
 
-                <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', }}>
-                DIGITAL MARKETING PROCESS
+                <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom:10}}>
+                Digital Marketing Process
                 </Typography>
                     <Grid container spacing={6} justifyContent="center" alignItems="center" sx={{marginX:3}}>
                         <Grid item xs={6}>
                             <Item>
                                 <AnimatedImage
-                                    src={MyImage} // Use the imported image
+                                    src={MyImage}
                                     alt="Digital Marketing"
-                                     // Make the image responsive
+                                
                                 />
                             </Item>
                         </Grid>

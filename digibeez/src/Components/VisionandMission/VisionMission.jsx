@@ -26,7 +26,7 @@ const VisionMission = () => {
   ];
 
   return (
-    <Box sx={{ py: 6, px: { xs: 2, md: 8 } }}>
+    <Box sx={{ py: 6, px: { xs: 2, md: 8 }  }}>
       {/* Main Heading */}
       <Typography
         variant='h4'
@@ -35,7 +35,7 @@ const VisionMission = () => {
         sx={{
           fontWeight: 'bold',
           mb: 4,
-          marginTop: { xs: '-20px', sm: '130px', md: '310px' },
+          marginTop: 50,
           fontSize: { xs: '28px', md: '36px' },
         }}
       >
@@ -50,6 +50,8 @@ const VisionMission = () => {
           fontSize: { xs: '16px', md: '18px' },
           mb: 10,
           color: 'text.secondary',
+          marginX:10
+
         }}
       >
         At our digital marketing company, our vision is to establish ourselves
@@ -65,7 +67,7 @@ const VisionMission = () => {
       {sections.map((section, index) => (
         <Grid
           container
-          spacing={3}
+          spacing={6}
           alignItems='center'
           justifyContent='center'
           sx={{
@@ -81,7 +83,7 @@ const VisionMission = () => {
           <Grid
             item
             xs={12}
-            md={6}
+            md={4}
             sx={{
               display: 'flex',
               justifyContent: 'center',
@@ -105,7 +107,7 @@ const VisionMission = () => {
           <Grid
             item
             xs={12}
-            md={6}
+            md={5}
             sx={{
               display: 'flex',
               flexDirection: 'column',

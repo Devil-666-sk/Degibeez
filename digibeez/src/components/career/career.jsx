@@ -43,22 +43,24 @@ export default function Careers() {
 
         <Box
             sx={{
-                marginTop: -7,
+                marginTop: -12,
                 flexGrow: '1',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 minHeight: '100vh',
                 Width: '100vw', 
-                textAlign: 'center'
+                textAlign: 'center',
+                marginBottom:10
+                
             }}
         >
             <Box sx={{ width: '100%', maxWidth: 1200 }}>
-                <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', }}>
+                <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom:4}}>
                     Careers
                 </Typography>
                 <Typography variant="body2" gutterBottom sx={{
-                    marginBottom: '50px',
+                    marginBottom: 10, marginX:3
                 }}>
                     Digital marketing refers to a process of marketing brands to people through web-based platforms to achieve customer interaction. It involves tasks such as an SEO specialist, content producer, a social media officer, and data processor—professionals who combine creative and rational thinking. People in this filed always ensure that they innovate in technologies and trends in order to demonstrate the benefits of their innovation on organizational goals and objectives.
                 </Typography>
