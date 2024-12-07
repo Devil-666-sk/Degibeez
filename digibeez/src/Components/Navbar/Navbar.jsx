@@ -53,28 +53,36 @@ function Navbar(props) {
         component='nav'
         sx={{
           backgroundImage:
-            'radial-gradient(circle, #000000, #592a2a, #aa5934, #e79e25, #fff300);',
+            'radial-gradient(circle, #000000, #592a2a, #aa5934, #e79e25, #fff300)',
           boxShadow: 'none',
         }}
       >
-        <Toolbar sx={{ px: 3 }}>
+        <Toolbar sx={{ px: 6 }}>
           <IconButton
             color='inherit'
             aria-label='open drawer'
             edge='start'
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ display: { sm: 'none' } }} // Only show MenuIcon on mobile
           >
             <MenuIcon />
           </IconButton>
           <Typography
             variant='h6'
             component='div'
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{
+              flexGrow: { xs: 1, md: 0 }, // Center on mobile and tablet, no grow on desktop
+              textAlign: { xs: 'center', md: 'left' }, // Center on mobile/tablet, left on desktop
+            }}
           >
             DigiBeez
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' }, // Show navigation buttons only on desktop
+              marginLeft: 'auto', // Align navigation buttons to the right
+            }}
+          >
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
                 {item}
@@ -93,7 +101,7 @@ function Navbar(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', sm: 'block', md: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,

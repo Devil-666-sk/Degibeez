@@ -20,25 +20,24 @@ const Grow = () => {
     { title: 'Upskills your Team', img: Img4 },
   ];
 
-  // Theme-based breakpoints
+  
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Mobile view
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); // Tablet view
-
-  const radius = isMobile ? 120 : isTablet ? 200 : 300; // Consistent radius logic
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); 
+  const radius = isMobile ? 120 : isTablet ? 200 : 300; 
 
   return (
     <Container
       maxWidth='lg'
-      sx={{ textAlign: 'center', py: 6, mt: 4 }} // Consistent padding and margin
+      sx={{ textAlign: 'center', py: 8, mt: 2 }} 
     >
       {/* Main Title */}
       <Typography
         variant='h4'
         gutterBottom
         sx={{
-          fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }, // Responsive font size
-          mb: 4, // Bottom margin
+          fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }, 
+          mb: 6, 
         }}
       >
         How Can We Help You Grow
@@ -49,8 +48,8 @@ const Grow = () => {
         variant='body1'
         paragraph
         sx={{
-          fontSize: { xs: '0.9rem', sm: '1rem' }, // Adjust font size for smaller screens
-          mb: 6, // Bottom margin
+          fontSize: { xs: '0.9rem', sm: '1rem' }, 
+          mb: 6, 
         }}
       >
         As since we are ‘Digital First’ in every aspect of our lives, approach,
@@ -66,10 +65,10 @@ const Grow = () => {
       <Box
         sx={{
           position: 'relative',
-          width: `${radius * 2}px`, // Dynamic diameter
-          height: `${radius * 2}px`, // Dynamic diameter
-          margin: '0 auto', // Center alignment
-          mb: 10, // Add margin below the layout
+          width: `${radius * 2}px`, 
+          height: `${radius * 2}px`, 
+          margin: '0 auto', 
+          mb: 10, 
         }}
       >
         {/* Center Heading */}
@@ -86,20 +85,20 @@ const Grow = () => {
           <Typography
             variant='h5'
             sx={{
-              fontSize: { xs: '1.2rem', sm: '1.5rem', md: '2rem' }, // Responsive heading size
+              fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' }, 
               fontWeight: 'bold',
-              textShadow: '0px 2px 4px rgba(0,0,0,0.3)',
+              textShadow: '0px 5px 8px rgba(0,0,0,0.3)',
               marginTop: { xs: '40px', sm: '220px', md: '360px' },
             }}
           >
-            Grow Your Skills and Business
+            Grow Your <br /> Skills and <br /> Business
           </Typography>
         </Box>
 
         {items.map((item, index) => {
-          const angle = (index / items.length) * 360; // Calculate angle for each card
-          const x = radius * Math.cos((angle * Math.PI) / 180); // X-coordinate
-          const y = radius * Math.sin((angle * Math.PI) / 180); // Y-coordinate
+          const angle = (index / items.length) * 360; 
+          const x = radius * Math.cos((angle * Math.PI) / 180); 
+          const y = radius * Math.sin((angle * Math.PI) / 180); 
 
           return (
             <Box
@@ -109,18 +108,18 @@ const Grow = () => {
                 top: `calc(50% + ${y}px)`,
                 left: `calc(50% + ${x}px)`,
                 transform: 'translate(-50%, -50%)',
+
                 borderRadius: '50%',
-                background: 'linear-gradient(to bottom, #fdd835, #fbc02d)',
                 padding: '10px',
                 textAlign: 'center',
                 marginTop: { xs: '20px', sm: '100px', md: '180px' },
-                width: { xs: '100px', sm: '220px', md: '360px' }, // Dynamic card width
-                height: { xs: '100px', sm: '220px', md: '360px' }, // Dynamic card height
+                width: { xs: '100px', sm: '220px', md: '360px' },
+                height: { xs: '100px', sm: '220px', md: '360px' },
                 boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.3)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                 '&:hover': {
                   transform: 'translate(-50%, -50%) scale(1.1)',
-                  boxShadow: '0px 15px 30px rgba(0, 0, 0, 0.5)',
+                  boxShadow: '0px 25px 40px rgba(0, 0, 0, 0.5)',
                 },
               }}
             >
@@ -136,8 +135,9 @@ const Grow = () => {
                 variant='caption'
                 sx={{
                   mt: 1,
+                  marginTop: { xs: '7px', sm: '20px', md: '40px' },
                   display: 'block',
-                  fontSize: { xs: '0.6rem', sm: '0.8rem', md: '1rem' },
+                  fontSize: { xs: '0.6rem', sm: '0.8rem', md: '1.5rem' },
                 }}
               >
                 {item.title}
