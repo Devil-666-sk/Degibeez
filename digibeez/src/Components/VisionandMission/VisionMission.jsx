@@ -26,7 +26,7 @@ const VisionMission = () => {
   ];
 
   return (
-    <Box sx={{ py: 6, px: { xs: 2, md: 8 }  }}>
+    <Box sx={{ py: 6, px: { xs: 2, md: 8 } }}>
       {/* Main Heading */}
       <Typography
         variant='h4'
@@ -40,7 +40,6 @@ const VisionMission = () => {
           
 
           fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
-
         }}
       >
         What We Are Up To
