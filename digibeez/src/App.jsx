@@ -4,6 +4,8 @@ import AboutDigiBeez from './Components/About/AboutDigiBeez';
 import Grow from './Components/Grow/Grow';
 import Career from './components/career/career';
 import VisionMission from './Components/VisionandMission/VisionMission';
+import Footer from './Components/Footer/Footer';
+
 import DigitalMarketing from './Components/DigitalMarketing/DigitalMarketing';
 function App() {
   return (
@@ -12,9 +14,11 @@ function App() {
       <Carousel />
       <AboutDigiBeez />
       <Grow />
-      <VisionMission />
+      <VisionMission />  
       <DigitalMarketing />
-      <Career/>
+      <Career />
+      <Footer/>
+
     </>
   );
 }

@@ -35,11 +35,15 @@ const VisionMission = () => {
         sx={{
           fontWeight: 'bold',
           mb: 4,
+
           marginTop: 50,
           fontSize: { xs: '28px', md: '36px' },
+
+          fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+ main
         }}
       >
-        What We are Up to
+        What We Are Up To
       </Typography>
 
       {/* Paragraph Below Heading */}
@@ -47,8 +51,8 @@ const VisionMission = () => {
         variant='body1'
         textAlign='center'
         sx={{
-          fontSize: { xs: '16px', md: '18px' },
-          mb: 10,
+          fontSize: { xs: '1rem', md: '1.2rem' },
+          mb: 6,
           color: 'text.secondary',
           marginX:10
 
@@ -79,7 +83,7 @@ const VisionMission = () => {
           }}
           key={index}
         >
-          {/* Image and Content on the same line */}
+          {/* Image Section */}
           <Grid
             item
             xs={12}
@@ -96,7 +100,7 @@ const VisionMission = () => {
               alt={`${section.title} Image`}
               sx={{
                 width: '100%',
-                maxWidth: '400px',
+                maxWidth: { xs: '280px', sm: '320px', md: '400px' },
                 height: 'auto',
                 borderRadius: 2,
                 boxShadow: 3,
@@ -104,6 +108,7 @@ const VisionMission = () => {
             />
           </Grid>
 
+          {/* Content Section */}
           <Grid
             item
             xs={12}
@@ -112,7 +117,7 @@ const VisionMission = () => {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              alignItems: 'center',
+              alignItems: { xs: 'center', md: 'flex-start' },
               textAlign: { xs: 'center', md: 'left' },
               px: { xs: 2, md: 4 },
             }}
@@ -120,7 +125,11 @@ const VisionMission = () => {
             <Typography
               variant='h5'
               component='h2'
-              sx={{ fontWeight: 'bold', mb: 3 }}
+              sx={{
+                fontWeight: 'bold',
+                mb: 3,
+                fontSize: { xs: '1.5rem', md: '2rem' },
+              }}
             >
               {section.title}
             </Typography>
@@ -128,7 +137,10 @@ const VisionMission = () => {
               <Typography
                 variant='body1'
                 key={i}
-                sx={{ fontSize: { xs: '16px', md: '18px' }, mb: 2 }}
+                sx={{
+                  fontSize: { xs: '1rem', md: '1.2rem' },
+                  mb: 2,
+                }}
               >
                 {description}
               </Typography>
