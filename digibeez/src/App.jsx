@@ -4,6 +4,7 @@ import AboutDigiBeez from './Components/About/AboutDigiBeez';
 import Grow from './Components/Grow/Grow';
 import Career from './components/career/career';
 import VisionMission from './Components/VisionandMission/VisionMission';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <AboutDigiBeez />
       <Grow />
       <VisionMission />
-      {/* <Career/> */}
+      <Career/>
+      <Footer/>
     </>
   );
 }

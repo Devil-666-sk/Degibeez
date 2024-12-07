@@ -20,28 +20,21 @@ const Grow = () => {
     { title: 'Upskills your Team', img: Img4 },
   ];
 
+  
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-  const radius = isMobile ? 120 : isTablet ? 200 : 300;
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); 
+  const radius = isMobile ? 120 : isTablet ? 200 : 300; 
 
   return (
-    <Container
-      maxWidth='lg'
-      sx={{
-        textAlign: 'center',
-        py: 8,
-        mt: 2,
-        padding: { xs: '6px', sm: 0 },
-        margin: { xs: '2px', sm: 0 }, 
-      }}
-    >
+    <Container maxWidth='lg' sx={{ textAlign: 'center', py: 8, mt: 2 }}>
       {/* Main Title */}
       <Typography
-        variant='h4'
+        variant='h5'
         gutterBottom
         sx={{
-          fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+          fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' },
+          fontWeight: 'bold',
           mb: 6,
         }}
       >
@@ -113,6 +106,7 @@ const Grow = () => {
                 top: `calc(50% + ${y}px)`,
                 left: `calc(50% + ${x}px)`,
                 transform: 'translate(-50%, -50%)',
+
                 borderRadius: '50%',
                 padding: '10px',
                 textAlign: 'center',
