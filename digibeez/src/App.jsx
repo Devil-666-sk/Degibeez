@@ -17,13 +17,10 @@ function App() {
       <Carousel />
       <AboutDigiBeez />
       <Grow />
-      <VisionMission />
-<<<<<<< HEAD
-      <Career/>
-      <Footer/>
-=======
+      <VisionMission />  
       <DigitalMarketing />
-      <Career/>
+      <Career />
+      <Footer/>
 >>>>>>> 56ce5330400bc63351f8450526a7fa707333f2c9
     </>
   );
