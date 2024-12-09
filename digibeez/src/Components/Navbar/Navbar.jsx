@@ -11,8 +11,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Digi from '../../assets/NavbarLogo/DigiBeezICon.png';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About Us', 'Career', 'Contact'];
@@ -27,9 +27,16 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant='h6' sx={{ my: 2 }}>
-        DigiBeez
-      </Typography>
+      <Box
+        component='img'
+        src={Digi}
+        alt='Logo'
+        sx={{
+          height: { xs: 70, sm: 80, md: 90 }, 
+          width: 'auto', 
+          my: 2,
+        }}
+      />
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -63,24 +70,25 @@ function Navbar(props) {
             aria-label='open drawer'
             edge='start'
             onClick={handleDrawerToggle}
-            sx={{ display: { sm: 'none' } }} // Only show MenuIcon on mobile
+            sx={{ display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant='h6'
-            component='div'
+          <Box
+            component='img'
+            src={Digi}
+            alt='Logo'
             sx={{
-              flexGrow: { xs: 1, md: 0 }, // Center on mobile and tablet, no grow on desktop
-              textAlign: { xs: 'center', md: 'left' }, // Center on mobile/tablet, left on desktop
+              height: { xs: 70, sm: 80, md: 90 }, 
+              width: 'auto', 
+              flexGrow: { xs: 1, md: 0 },
+              textAlign: { xs: 'center', md: 'left' },
             }}
-          >
-            DigiBeez
-          </Typography>
+          />
           <Box
             sx={{
-              display: { xs: 'none', md: 'flex' }, // Show navigation buttons only on desktop
-              marginLeft: 'auto', // Align navigation buttons to the right
+              display: { xs: 'none', md: 'flex' },
+              marginLeft: 'auto',
             }}
           >
             {navItems.map((item) => (

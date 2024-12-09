@@ -9,6 +9,7 @@ import {
   Grid,
 } from '@mui/material';
 import { Facebook, Twitter, LinkedIn } from '@mui/icons-material';
+import Digi from '../../assets/NavbarLogo/DigiBeezIcon.png';
 
 const Footer = () => {
   const theme = useTheme();
@@ -37,7 +38,6 @@ const Footer = () => {
     { title: 'Search Advertising', href: '#' },
     { title: 'Display Advertising', href: '#' },
   ];
- 
 
   const renderLinks = (links) =>
     links.map((link, index) => (
@@ -61,9 +61,17 @@ const Footer = () => {
         <Grid container spacing={4}>
           {/* Left Section: Company Info */}
           <Grid item xs={12} sm={6} md={4}>
-            <Typography variant='h6' sx={{ mb: 2 }}>
-              DigiBeez
-            </Typography>
+            {/* Company Logo */}
+            <Box
+              component='img'
+              src={Digi}
+              alt='DigiBeez Logo'
+              sx={{
+                height: { xs: 50, sm: 60, md: 80 }, 
+                width: 'auto',
+                mb: 2,
+              }}
+            />
             <Typography variant='body2'>
               Digibeez is a digital marketing company we understand the power of
               changing a brand in the modern world through new concepts and
@@ -113,7 +121,6 @@ const Footer = () => {
                 </Typography>
                 {renderLinks(PPCLinks)}
               </Grid>
-              
             </Grid>
           </Grid>
         </Grid>
