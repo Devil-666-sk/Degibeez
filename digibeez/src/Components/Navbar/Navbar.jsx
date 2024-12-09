@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import Digi from '../../assets/NavbarLogo/DigiBeezICon.png';
+import DigiIcon from '../../assets/NavbarLogo/DigiBeezICon.png';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About Us', 'Career', 'Contact'];
@@ -29,11 +29,11 @@ function Navbar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Box
         component='img'
-        src={Digi}
+        src={DigiIcon}
         alt='Logo'
         sx={{
-          height: { xs: 70, sm: 80, md: 90 }, 
-          width: 'auto', 
+          height: { xs: 70, sm: 80, md: 90 },
+          width: 'auto',
           my: 2,
         }}
       />
@@ -79,8 +79,8 @@ function Navbar(props) {
             src={Digi}
             alt='Logo'
             sx={{
-              height: { xs: 70, sm: 80, md: 90 }, 
-              width: 'auto', 
+              height: { xs: 70, sm: 80, md: 90 },
+              width: 'auto',
               flexGrow: { xs: 1, md: 0 },
               textAlign: { xs: 'center', md: 'left' },
             }}

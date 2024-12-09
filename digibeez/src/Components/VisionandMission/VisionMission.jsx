@@ -36,10 +36,7 @@ const VisionMission = () => {
         sx={{
           fontWeight: 'bold',
           mb: 4,
-
           marginTop: 50,
-          fontSize: { xs: '28px', md: '36px' },
-
           fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
         }}
       >
