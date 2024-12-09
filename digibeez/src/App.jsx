@@ -5,6 +5,7 @@ import Grow from './Components/Grow/Grow';
 import Career from './components/career/career';
 import VisionMission from './Components/VisionandMission/VisionMission';
 import Footer from './Components/Footer/Footer';
+import Form from './Components/Form/Form';
 
 import DigitalMarketing from './Components/DigitalMarketing/DigitalMarketing';
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <VisionMission />  
       <DigitalMarketing />
       <Career />
+      <Form/>
       <Footer/>
 
     </>
