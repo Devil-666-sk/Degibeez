@@ -26,6 +26,7 @@ const VisionMission = () => {
   ];
 
   return (
+   
     <Box sx={{ py: 6, px: { xs: 2, md: 8 } }}>
       {/* Main Heading */}
       <Typography
@@ -36,8 +37,8 @@ const VisionMission = () => {
           fontWeight: 'bold',
           mb: 4,
 
-          marginTop: 37,
-          
+          marginTop: 50,
+          fontSize: { xs: '28px', md: '36px' },
 
           fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
         }}
@@ -53,7 +54,7 @@ const VisionMission = () => {
           fontSize: { xs: '0.9rem', sm: '1rem' },
           mb: 6,
           color: 'text.secondary',
-          marginX:{xs:5, sm:7, md:8, lg:5, xl:30}
+          marginX:10
 
         }}
       >
