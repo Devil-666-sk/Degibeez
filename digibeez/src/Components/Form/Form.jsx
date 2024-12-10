@@ -239,4 +239,3 @@ const ContactMap = () => {
 
 export default ContactMap;
 
-export default ContactForm
