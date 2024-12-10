@@ -76,7 +76,7 @@ function Navbar(props) {
           </IconButton>
           <Box
             component='img'
-            src={Digi}
+            src={DigiIcon}
             alt='Logo'
             sx={{
               height: { xs: 70, sm: 80, md: 90 },

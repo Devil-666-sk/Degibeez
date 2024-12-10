@@ -113,11 +113,11 @@ const Grow = () => {
                 marginTop: { xs: '20px', sm: '100px', md: '180px' },
                 width: { xs: '100px', sm: '220px', md: '360px' },
                 height: { xs: '100px', sm: '220px', md: '360px' },
-                boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.3)',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.5)',
+                transition: 'transform 0.5s ease, box-shadow 0.5s ease',
                 '&:hover': {
                   transform: 'translate(-50%, -50%) scale(1.1)',
-                  boxShadow: '0px 25px 40px rgba(0, 0, 0, 0.5)',
+                  boxShadow: '0px 25px 40px rgba(0, 0, 0, 0.8)',
                 },
               }}
             >
