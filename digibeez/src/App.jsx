@@ -6,7 +6,6 @@ import Career from './components/career/career';
 import VisionMission from './Components/VisionandMission/VisionMission';
 import Footer from './Components/Footer/Footer';
 import Form from './Components/Form/Form';
-
 import DigitalMarketing from './Components/DigitalMarketing/DigitalMarketing';
 function App() {
   return (
@@ -15,12 +14,11 @@ function App() {
       <Carousel />
       <AboutDigiBeez />
       <Grow />
-      <VisionMission />  
+      <VisionMission />
       <DigitalMarketing />
       <Career />
-      <Form/>
-      <Footer/>
-
+      <Form />
+      <Footer />
     </>
   );
 }
