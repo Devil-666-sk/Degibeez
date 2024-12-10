@@ -26,6 +26,7 @@ const VisionMission = () => {
   ];
 
   return (
+   
     <Box sx={{ py: 6, px: { xs: 2, md: 8 } }}>
       {/* Main Heading */}
       <Typography
@@ -35,7 +36,11 @@ const VisionMission = () => {
         sx={{
           fontWeight: 'bold',
           mb: 4,
+<<<<<<< HEAD
           marginTop: { xs: -5, sm: 12, md: 37 },
+=======
+          marginTop: 50,
+>>>>>>> 8368e4f733b69aa434da3c7e7b1dbd7adcafd81a
           fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
         }}
       >
@@ -50,7 +55,12 @@ const VisionMission = () => {
           fontSize: { xs: '0.9rem', sm: '1rem' },
           mb: 6,
           color: 'text.secondary',
+<<<<<<< HEAD
           marginX: { xs: 5, sm: 7, md: 8, lg: 5, xl: 30 },
+=======
+          marginX:10
+
+>>>>>>> 8368e4f733b69aa434da3c7e7b1dbd7adcafd81a
         }}
       >
         At our digital marketing company, our vision is to establish ourselves

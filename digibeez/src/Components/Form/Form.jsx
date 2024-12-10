@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
 import {
+ 
   TextField,
+ 
   Button,
+ 
   Typography,
+ 
   Container,
+ 
   Select,
+ 
   MenuItem,
+ 
   FormControl,
+ 
   InputLabel,
+
   Box,
+
 } from '@mui/material';
 import Grid from '@mui/material/Grid'; 
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+// import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { FaMapMarkerAlt } from 'react-icons/fa';
@@ -102,30 +112,11 @@ const ContactMap = () => {
       select: '',
       message: '',
     });
-  };
+  }
 
-  const handleShowLocation = () => {
-    if (!navigator.geolocation) {
-      alert('Geolocation is not supported by your browser');
-      return;
-    }
-    setLoading(true);
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        setUserPosition([latitude, longitude]);
-        setLoading(false);
-      },
-      (error) => {
-        alert('Unable to retrieve your location');
-        setLoading(false);
-      }
-    );
-  };
+  // Google Maps configuration
 
-  const sushmaInfiniumCoords = [30.6387037, 76.8233459];
-  const userLocationIcon = createCustomIcon();
-  const sushmaInfiniumIcon = createCustomIcon();
+
 
   return (
     <Container sx={{ mb: 5 }}>
@@ -219,10 +210,7 @@ const ContactMap = () => {
               height: '100%',
               borderRadius: '8px',
               overflow: 'hidden',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              boxShadow: '0 8px 16px rgba(0, 0, 0, 0.7)',
+              padding: "15px 0 10px 0"
             }}
           >
             <Box
@@ -233,35 +221,14 @@ const ContactMap = () => {
                 overflow: 'hidden',
               }}
             >
-              <MapContainer
-                center={sushmaInfiniumCoords}
-                zoom={17}
-                style={{ width: '100%', height: '100%' }}
-                zoomAnimation={true}
-              >
-                <TileLayer
-                  url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-                  attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-                />
-                <Marker
-                  position={sushmaInfiniumCoords}
-                  icon={sushmaInfiniumIcon}
-                >
-                  <Popup>
-                    <Typography>Sushma Infinium, Zirakpur</Typography>
-                  </Popup>
-                </Marker>
-                {userPosition && (
-                  <>
-                    <FlyToLocation position={userPosition} />
-                    <Marker position={userPosition} icon={userLocationIcon}>
-                      <Popup>
-                        <Typography>You are here!</Typography>
-                      </Popup>
-                    </Marker>
-                  </>
-                )}
-              </MapContainer>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593.9106829781706!2d76.82393733668518!3d30.638541230491246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb2b486ba04d%3A0x2555b85046f24e48!2sSushma%20Infinium!5e0!3m2!1sen!2sin!4v1733743494608!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </Box>
           </Box>
         </Grid>
@@ -271,3 +238,5 @@ const ContactMap = () => {
 };
 
 export default ContactMap;
+
+export default ContactForm
