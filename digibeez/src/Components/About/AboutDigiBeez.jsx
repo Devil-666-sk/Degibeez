@@ -35,7 +35,7 @@ const cards = [
     id: 3,
     title: 'Display Advertising',
     description:
-      'Get the attention of the highest possible number of viewers on the Internet by placing your brand where it should be. Try our display advertising services to get your brand right across from every perspective.',
+      'Get the attention of the highest possible number of viewers on the Internet by placing your brand where it should be. ',
     image: DisplayImage,
   },
   {
@@ -56,27 +56,27 @@ const cards = [
     id: 6,
     title: 'Email Marketing',
     description:
-      'Get the attention of the highest possible number of viewers on the Internet by placing your brand where it should be. Try our display advertising services to get your brand right across from every perspective.',
+      'Boost your business growth with our comprehensive email marketing strategies, designed to deliver targeted and personalized content directly to your audience.With our targeted campaigns, you will see a significant boost in visibility and engagement.Boost engagement with targeted emails. ',
     image: EmailImage,
   },
   {
     id: 7,
-    title: 'Online Reputation Management (ORM)',
+    title: 'Online Reputation Management(ORM)',
     description:
-      'Take complete possession and discretion of attaining what the outcomes will be on-line through our ORM services and achieve the highest advantage.',
+      'Take complete possession and discretion of attaining what the outcomes will be on-line through our ORM services and achieve the highest advantage. We focus on building a positive image and effectively handling any negative feedback to maintain your brands credibility and trust.',
     image: ORMImage,
   },
 ];
 
 const AboutDigiBeez = () => {
   return (
-    <Container sx={{ py: 6 }}>
+    <Box textAlign={'center'} sx={{ py: 6, mx:{xs:2, md:1} } }>
       {/* Title Section */}
       <Box textAlign='center' mb={6}>
-        <Typography variant='h4' fontWeight='bold' gutterBottom>
+        <Typography variant='h3' mx={{xs:5, md:0}} fontWeight='bold' gutterBottom >
           About DigiBeez
         </Typography>
-        <Typography variant='body1' color='textSecondary'>
+        <Typography variant='body1' color='textSecondary'  sx={{mx:{xs:1 ,md:15}, textAlign:{xs:'justify', md:'center'}}}>
           Digital marketing is the use of internet-connected devices to support
           marketing communication, involving the use of social media, search
           engines, email, and websites to teach customers and ultimately foster
@@ -92,6 +92,9 @@ const AboutDigiBeez = () => {
         justifyContent='center'
         sx={{
           minHeight: '60vh', 
+          width: '100%', // Change this to your desired width
+            // Optional: Set a max width
+        mt:10
         }}
       >
         {/* Top 2 cards */}
@@ -101,17 +104,18 @@ const AboutDigiBeez = () => {
           xs={12}
           sm={6}
           md={6}
-          spacing={5}
+          spacing={6}
           justifyContent='center'
           mb={2}
         >
           {cards.slice(0, 2).map((card) => (
-            <Grid item xs={12} sm={6} md={4} key={card.id}>
+            <Grid item xs={12} sm={6} md={4} lg={4} xl={2} key={card.id}>
               <Card
                 sx={{
-                  height: 340,
+                  maxheight: 340,
+                  height:'auto',
                   width: '100%',
-                  maxWidth: 400,
+                  maxWidth: 480,
                   boxShadow: 3,
                   borderRadius: 2,
                   textAlign: 'center',
@@ -121,7 +125,7 @@ const AboutDigiBeez = () => {
               >
                 <CardMedia
                   component='img'
-                  height='150'
+                  height='200'
                   image={card.image}
                   alt={card.title}
                   sx={{ objectFit: 'contain', p: 2 }}
@@ -146,17 +150,18 @@ const AboutDigiBeez = () => {
           xs={12}
           sm={6}
           md={6}
-          spacing={5}
+          spacing={7}
           justifyContent='center'
           mb={2}
         >
           {cards.slice(2, 5).map((card) => (
-            <Grid item xs={12} sm={6} md={4} key={card.id}>
+            <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={card.id}>
               <Card
                 sx={{
-                  height: 340,
+                  maxheight: 340,
+                  height:'auto',
                   width: '100%',
-                  maxWidth: 350,
+                  maxWidth: 480,
                   boxShadow: 3,
                   borderRadius: 2,
                   textAlign: 'center',
@@ -166,7 +171,7 @@ const AboutDigiBeez = () => {
               >
                 <CardMedia
                   component='img'
-                  height='150'
+                  height='200'
                   image={card.image}
                   alt={card.title}
                   sx={{ objectFit: 'contain', p: 2 }}
@@ -191,16 +196,17 @@ const AboutDigiBeez = () => {
           xs={12}
           sm={6}
           md={6}
-          spacing={5}
+          spacing={6}
           justifyContent='center'
         >
           {cards.slice(5, 7).map((card) => (
             <Grid item xs={12} sm={6} md={4} key={card.id}>
               <Card
                 sx={{
-                  height: 340,
+                  maxheight: 340,
+                  height:'auto',
                   width: '100%',
-                  maxWidth: 400,
+                  maxWidth: 480,
                   boxShadow: 3,
                   borderRadius: 2,
                   textAlign: 'center',
@@ -210,7 +216,7 @@ const AboutDigiBeez = () => {
               >
                 <CardMedia
                   component='img'
-                  height='150'
+                  height='180'
                   image={card.image}
                   alt={card.title}
                   sx={{ objectFit: 'contain', p: 2 }}
@@ -228,7 +234,7 @@ const AboutDigiBeez = () => {
           ))}
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

@@ -22,20 +22,23 @@ const Grow = () => {
 
   
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md')); 
-  const radius = isMobile ? 120 : isTablet ? 200 : 300; 
+  const isExtraLarge = useMediaQuery(theme.breakpoints.up('xl')); 
+  
+  const radius = isMobile ? 100 : isTablet ? 200 : isExtraLarge ? 500 :300
 
   return (
-    <Container maxWidth='lg' sx={{ textAlign: 'center', py: 8, mt: 2 }}>
+    <Box textAlign={'center'}  sx={{ py: 8, mt: 2, pb:15 }}>
       {/* Main Title */}
       <Typography
-        variant='h5'
+        variant='h3'
         gutterBottom
         sx={{
-          fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' },
+          // fontSize: {  sm: '1.8rem', md: '2rem' },
           fontWeight: 'bold',
           mb: 6,
+          mx:2
         }}
       >
         How Can We Help You Grow
@@ -47,7 +50,8 @@ const Grow = () => {
         paragraph
         sx={{
           fontSize: { xs: '0.9rem', sm: '1rem' },
-          mb: 6, marginX:4
+          mb: 10, marginX:{xs:3, md:15},
+          textAlign:{xs:'justify', md:'center'}
         }}
       >
         As since we are ‘Digital First’ in every aspect of our lives, approach,
@@ -67,6 +71,9 @@ const Grow = () => {
           height: `${radius * 2}px`,
           margin: '0 auto',
           mb: 10,
+        
+          
+          
         }}
       >
         {/* Center Heading */}
@@ -78,15 +85,17 @@ const Grow = () => {
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
             zIndex: 10,
+
           }}
         >
           <Typography
             variant='h5'
             sx={{
-              fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2rem' },
+              fontSize: { xs: '0.9rem', sm: '1.8rem', md: '2rem' },
               fontWeight: 'bold',
               textShadow: '0px 5px 8px rgba(0,0,0,0.3)',
               marginTop: { xs: '40px', sm: '220px', md: '360px' },
+             
             }}
           >
             Grow Your <br /> Skills and <br /> Business
@@ -111,8 +120,8 @@ const Grow = () => {
                 padding: '10px',
                 textAlign: 'center',
                 marginTop: { xs: '20px', sm: '100px', md: '180px' },
-                width: { xs: '100px', sm: '220px', md: '360px' },
-                height: { xs: '100px', sm: '220px', md: '360px' },
+                width: { xs: '100px', sm: '220px', md: '350px', xl:'400px' },
+                height: { xs: '100px', sm: '220px', md: '350px', xl:'400px' },
                 boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.5)',
                 transition: 'transform 0.5s ease, box-shadow 0.5s ease',
                 '&:hover': {
@@ -125,7 +134,8 @@ const Grow = () => {
                 src={item.img}
                 alt={item.title}
                 style={{
-                  maxWidth: '100%',
+                
+                  width: '80%',
                   borderRadius: '50%',
                 }}
               />
@@ -133,7 +143,7 @@ const Grow = () => {
                 variant='caption'
                 sx={{
                   mt: 1,
-                  marginTop: { xs: '7px', sm: '20px', md: '40px' },
+                  marginTop: { xs: '-7px', sm: '20px', md: '-17px' },
                   display: 'block',
                   fontSize: { xs: '0.6rem', sm: '0.8rem', md: '1.5rem' },
                 }}
@@ -144,7 +154,7 @@ const Grow = () => {
           );
         })}
       </Box>
-    </Container>
+    </Box>
   );
 };
 

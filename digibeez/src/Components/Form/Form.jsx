@@ -128,8 +128,8 @@ const ContactMap = () => {
   const sushmaInfiniumIcon = createCustomIcon();
 
   return (
-    <Container sx={{ mb: 5 }}>
-      <Typography variant='h3' sx={{ fontWeight: 'bold' }} gutterBottom>
+    <Box sx={{ mb: 5, mx:{xs:3, md:15} }}>
+      <Typography textAlign={'center'} variant='h3' sx={{ fontWeight: 'bold' }} gutterBottom>
         Contact Us
       </Typography>
 
@@ -228,7 +228,7 @@ const ContactMap = () => {
             <Box
               sx={{
                 width: '100%',
-                height: '450px',
+                height: '500px',
                 borderRadius: '8px',
                 overflow: 'hidden',
               }}
@@ -266,7 +266,7 @@ const ContactMap = () => {
           </Box>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

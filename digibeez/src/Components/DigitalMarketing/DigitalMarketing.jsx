@@ -18,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const AnimatedImage = styled('img')({
-    maxWidth: 495,
+    maxWidth: 610,
     width: '100%',
     maxHeight: 600,
     height: 'auto',
@@ -40,12 +40,12 @@ export default function DigitalMarketing() {
                 Width: '100vw',
                 textAlign: 'center'
             }}>
-                <Box sx={{ width: '100%' , maxWidth:1200, marginBottom:10}}>
+                <Box sx={{ width: '100%' , maxWidth:1600, marginBottom:10}}>
 
-                <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom:10}}>
+                <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom:7}}>
                 Digital Marketing Process
                 </Typography>
-                    <Grid container spacing={13} justifyContent="center" alignItems="center" sx={{marginX:3}}>
+                    <Grid container spacing={{xs:8,md:20}} justifyContent="center" alignItems="center" sx={{marginX:3}}>
                         <Grid item xs={6}>
                             <Item>
                                 <AnimatedImage
@@ -56,8 +56,8 @@ export default function DigitalMarketing() {
                             </Item>
                         </Grid>
 
-                        <Grid item xs={6} justifyContent={'center'} >
-                            <Box sx={{ textAlign: 'left', maxWidth: 510, width: 'auto',maxHeight: 550, height: 'auto' }}>
+                        <Grid item xs={6} justifyContent={'center'}  >
+                            <Box sx={{ textAlign: 'left', maxWidth: 610, width: 'auto',maxHeight: 550, height: 'auto' }}>
                                 
                                 <h3>Planning and Strategy:</h3>
                                 <p>Setting goals, exploring audiences and choosing proper channels which can be social networks, SEO, and ads.</p>
