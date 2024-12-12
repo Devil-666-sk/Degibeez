@@ -32,7 +32,7 @@ function Navbar(props) {
         src={DigiIcon}
         alt='Logo'
         sx={{
-          height: { xs: 70, sm: 80, md: 90 },
+          height: { xs: 70, sm: 80, md: 50 },
           width: 'auto',
           my: 2,
         }}
@@ -64,7 +64,7 @@ function Navbar(props) {
           boxShadow: 'none',
         }}
       >
-        <Toolbar sx={{ px: 6 }}>
+        <Toolbar sx={{ mx:{xs:0,xl:10} }}>
           <IconButton
             color='inherit'
             aria-label='open drawer'
@@ -81,8 +81,9 @@ function Navbar(props) {
             sx={{
               height: { xs: 70, sm: 80, md: 90 },
               width: 'auto',
-              flexGrow: { xs: 1, md: 0 },
-              textAlign: { xs: 'center', md: 'left' },
+              flexGrow: { xs: 0, md: 0 },
+              textAlign: { xs: 'center', md: 'center' },
+              
             }}
           />
           <Box

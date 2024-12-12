@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material/';
+import { Box, Typography } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import image1 from '../../assets/VisionMissionImages/Vision.png';
 import image2 from '../../assets/VisionMissionImages/Mission.png';
 
@@ -26,18 +27,18 @@ const VisionMission = () => {
   ];
 
   return (
-   
-    <Box sx={{ py: 6, px: { xs: 2, md: 8 } }}>
+
+    <Box >
       {/* Main Heading */}
       <Typography
-        variant='h4'
+        variant='h3'
         component='h1'
         textAlign='center'
         sx={{
           fontWeight: 'bold',
           mb: 4,
           marginTop: { xs: -5, sm: 12, md: 37 },
-          fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+          // fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
         }}
       >
         What We Are Up To
@@ -51,7 +52,8 @@ const VisionMission = () => {
           fontSize: { xs: '0.9rem', sm: '1rem' },
           mb: 6,
           color: 'text.secondary',
-          marginX: { xs: 5, sm: 7, md: 8, lg: 5, xl: 30 },
+          mx: { xs: 3, md: 15 },
+          textAlign: { xs: 'justify', md: 'center' }
         }}
       >
         At our digital marketing company, our vision is to establish ourselves
@@ -66,16 +68,19 @@ const VisionMission = () => {
 
       {sections.map((section, index) => (
         <Grid
-          container
-          spacing={6}
-          alignItems='center'
-          justifyContent='center'
+          item
+          xs={12}
+          sm={8}
+
           sx={{
+            display: 'flex',
+            justifyContent: 'space-evenly',
             flexDirection: {
               xs: 'column',
               md: section.reverse ? 'row-reverse' : 'row',
             },
             mb: 10,
+            
           }}
           key={index}
         >
@@ -83,11 +88,12 @@ const VisionMission = () => {
           <Grid
             item
             xs={12}
-            md={4}
+            md={6}
             sx={{
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
+
             }}
           >
             <Box
@@ -96,10 +102,11 @@ const VisionMission = () => {
               alt={`${section.title} Image`}
               sx={{
                 width: '100%',
-                maxWidth: { xs: '280px', sm: '320px', md: '400px' },
+                maxWidth: { xs: '280px', sm: '320px', md: '900px' },
                 height: 'auto',
                 borderRadius: 2,
                 boxShadow: 3,
+                flex: 1,
               }}
             />
           </Grid>
@@ -108,14 +115,16 @@ const VisionMission = () => {
           <Grid
             item
             xs={12}
-            md={5}
+            md={8}
             sx={{
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: { xs: 'center', md: 'flex-start' },
-              textAlign: { xs: 'center', md: 'left' },
-              px: { xs: 2, md: 4 },
+              textAlign: { xs: 'justify', md: 'left' },
+              
+              width: {xs:'100%',md:'40%'},
+              
             }}
           >
             <Typography
@@ -124,7 +133,10 @@ const VisionMission = () => {
               sx={{
                 fontWeight: 'bold',
                 mb: 3,
-                fontSize: { xs: '1.5rem', md: '2rem' },
+                fontSize: { xs: '1.4rem', md: '2rem' },
+                mt:2,
+                
+              
               }}
             >
               {section.title}
@@ -136,6 +148,7 @@ const VisionMission = () => {
                 sx={{
                   fontSize: { xs: '0.9rem', sm: '1rem' },
                   mb: 2,
+                  mx:{ xs: 5 , md:0}
                 }}
               >
                 {description}
@@ -143,6 +156,8 @@ const VisionMission = () => {
             ))}
           </Grid>
         </Grid>
+
+
       ))}
     </Box>
   );

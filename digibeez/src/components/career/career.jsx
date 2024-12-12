@@ -43,7 +43,7 @@ export default function Careers() {
 
         <Box
             sx={{
-                marginTop: -5,
+                marginTop: {xs:5 ,md:-5},
                 flexGrow: '1',
                 display: 'flex',
                 justifyContent: 'center',
@@ -55,23 +55,24 @@ export default function Careers() {
                 
             }}
         >
-            <Box sx={{ width: '100%', maxWidth: 1200 }}>
+            <Box sx={{ width: '100%'}}>
                 <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom:4}}>
                     Careers
                 </Typography>
                 <Typography variant="body2" gutterBottom sx={{
-                    marginBottom: 10, marginX:3, fontSize: { xs: '0.9rem', sm: '1rem' } 
+                    marginBottom: 8, mx:{xs:3,md:15}, fontSize: { xs: '0.9rem', sm: '1rem' },
+                    textAlign:{xs:'justify', md:'center'} 
                 }}>
                     Digital marketing refers to a process of marketing brands to people through web-based platforms to achieve customer interaction. It involves tasks such as an SEO specialist, content producer, a social media officer, and data processor—professionals who combine creative and rational thinking. People in this filed always ensure that they innovate in technologies and trends in order to demonstrate the benefits of their innovation on organizational goals and objectives.
                 </Typography>
-                <Grid container spacing={10} justifyContent={'center'} sx={{marginX:5} }>
+            <Grid container spacing={{xs:8, md:20}} justifyContent={'center'} sx={{marginX:5} }>
                     {cardData.map((card, index) => ( 
-                        <Grid item xs={12} sm={6} md={6}  key={index}>
+                        <Grid item xs={12} sm={6} md={4}  key={index}>
                             <Card sx={{
                                 
                                 width: '100%',
-                                maxWidth: 520,
-                                minHeight: 340,
+                                maxWidth: 620,
+                                minHeight: 440,
                                 height: 'auto', 
 
                             }}
@@ -80,7 +81,7 @@ export default function Careers() {
                                     <CardMedia
                                         sx={{ objectFit: 'cover' }}
                                         component="img"
-                                        height="190"
+                                        height="300"
                                         image={card.image} 
                                         alt={card.title}
                                     />
