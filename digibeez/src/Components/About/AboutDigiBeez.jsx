@@ -104,7 +104,7 @@ const AboutDigiBeez = () => {
           xs={12}
           sm={6}
           md={6}
-          spacing={6}
+          spacing={4}
           justifyContent='center'
           mb={2}
         >
@@ -115,7 +115,7 @@ const AboutDigiBeez = () => {
                   maxheight: 340,
                   height:'auto',
                   width: '100%',
-                  maxWidth: 480,
+                  maxWidth: 400,
                   boxShadow: 3,
                   borderRadius: 2,
                   textAlign: 'center',
@@ -149,8 +149,8 @@ const AboutDigiBeez = () => {
           item
           xs={12}
           sm={6}
-          md={6}
-          spacing={7}
+          md={8}
+          spacing={4}
           justifyContent='center'
           mb={2}
         >
@@ -161,7 +161,7 @@ const AboutDigiBeez = () => {
                   maxheight: 340,
                   height:'auto',
                   width: '100%',
-                  maxWidth: 480,
+                  maxWidth: 400,
                   boxShadow: 3,
                   borderRadius: 2,
                   textAlign: 'center',
@@ -196,7 +196,7 @@ const AboutDigiBeez = () => {
           xs={12}
           sm={6}
           md={6}
-          spacing={6}
+          spacing={4}
           justifyContent='center'
         >
           {cards.slice(5, 7).map((card) => (
@@ -206,7 +206,7 @@ const AboutDigiBeez = () => {
                   maxheight: 340,
                   height:'auto',
                   width: '100%',
-                  maxWidth: 480,
+                  maxWidth: 400,
                   boxShadow: 3,
                   borderRadius: 2,
                   textAlign: 'center',
