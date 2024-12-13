@@ -6,8 +6,8 @@ import {
   Link,
   useTheme,
   useMediaQuery,
-  Grid,
 } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import { Facebook, Twitter, LinkedIn } from '@mui/icons-material';
 import Digi from '../../assets/NavbarLogo/DigiBeezIcon.png';
 
@@ -56,18 +56,19 @@ const Footer = () => {
     ));
 
   return (
-    <Box sx={{ backgroundColor: '#222', color: '#fff', py: 4 }}>
-      <Container maxWidth='lg'>
-        <Grid container spacing={4}>
+    <Box display={'flex'} justifyContent={'space-around'} sx={{ backgroundColor: '#222', color: '#fff', py: 4 }}>
+      <Container  maxWidth='xl'>
+        <Grid container  spacing={4}>
           {/* Left Section: Company Info */}
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid width={'40%'} item xs={12} sm={6} md={4}>
             {/* Company Logo */}
             <Box
               component='img'
               src={Digi}
               alt='DigiBeez Logo'
               sx={{
-                height: { xs: 50, sm: 60, md: 80 }, 
+                height: { xs: 50, sm: 60, md: 80 },
+                 
                 width: 'auto',
                 mb: 2,
               }}
@@ -95,8 +96,8 @@ const Footer = () => {
           </Grid>
 
           {/* Middle Section: Grouped Links */}
-          <Grid item xs={12} sm={6} md={8}>
-            <Grid container spacing={2}>
+          <Grid display={'flex'} item xs={12} sm={6} md={8} mt={3}>
+            <Grid container spacing={4}>
               <Grid item xs={6} sm={3}>
                 <Typography variant='subtitle1' sx={{ mb: 1 }}>
                   Quick Links
