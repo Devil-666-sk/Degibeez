@@ -74,12 +74,13 @@ const VisionMission = () => {
 
           sx={{
             display: 'flex',
-            justifyContent: 'space-evenly',
+            justifyContent: 'center',
             flexDirection: {
               xs: 'column',
               md: section.reverse ? 'row-reverse' : 'row',
             },
             mb: 10,
+            gap:'60px'
             
           }}
           key={index}
@@ -102,7 +103,7 @@ const VisionMission = () => {
               alt={`${section.title} Image`}
               sx={{
                 width: '100%',
-                maxWidth: { xs: '280px', sm: '320px', md: '900px' },
+                maxWidth: { xs: '280px', sm: '320px', md: '700px' },
                 height: 'auto',
                 borderRadius: 2,
                 boxShadow: 3,
