@@ -138,9 +138,9 @@ const ContactMap = () => {
         Contact Us
       </Typography>
 
-      <Box display={'flex'} gap={'50px'} direction={{ xs: 'column', md: 'row' }}>
+      <Box display={'flex'} flexDirection={{xs:'column',md:'row'}} gap={'50px'} >
         {/* Contact Form Section */}
-        <Box item xs={12} md={6} width={'50%'}>
+        <Box item xs={12} md={6} width={{xs:'100%',lg:'50%'}}>
           <form onSubmit={handleSubmit}>
             <TextField
               label='Name'
@@ -217,7 +217,7 @@ const ContactMap = () => {
         </Box>
 
         {/* Map Section */}
-        <Box item xs={12} md={6} width={'50%'}>
+        <Box item xs={12} md={6} width={{xs:'100%',lg:'50%'}}>
           <Box
             sx={{
               width: '100%',
@@ -233,7 +233,7 @@ const ContactMap = () => {
             <Box
               sx={{
                 width: '100%',
-                height: '500px',
+                height: {xs:'314px',sm:'500px'},
                 borderRadius: '8px',
                 overflow: 'hidden',
               }}

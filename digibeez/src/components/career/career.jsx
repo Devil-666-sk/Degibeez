@@ -65,7 +65,7 @@ export default function Careers() {
                 }}>
                     Digital marketing refers to a process of marketing brands to people through web-based platforms to achieve customer interaction. It involves tasks such as an SEO specialist, content producer, a social media officer, and data processor—professionals who combine creative and rational thinking. People in this filed always ensure that they innovate in technologies and trends in order to demonstrate the benefits of their innovation on organizational goals and objectives.
                 </Typography>
-            <Grid container spacing={{xs:8, md:10}} justifyContent={'center'} sx={{marginX:{xs:10,xl:12}} }>
+            <Grid container spacing={{xs:8, md:10}} justifyContent={'center'} sx={{marginX:{xs:4,xl:12}} }>
                     {cardData.map((card, index) => ( 
                         <Grid item xs={12} sm={6} md={4}  key={index}>
                             <Card sx={{
