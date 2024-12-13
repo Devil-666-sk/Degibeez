@@ -10,7 +10,7 @@ import {
   InputLabel,
   Box,
 } from '@mui/material';
-import Grid from '@mui/material/Grid'; // Corrected import
+// import Box from '@mui/material/Grid2';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -128,14 +128,19 @@ const ContactMap = () => {
   const sushmaInfiniumIcon = createCustomIcon();
 
   return (
-    <Box sx={{ mb: 5, mx:{xs:3, md:15} }}>
-      <Typography textAlign={'center'} variant='h3' sx={{ fontWeight: 'bold' }} gutterBottom>
+    <Box sx={{ mb: 5, mx: { xs: 3, md: 15 } }}>
+      <Typography
+        textAlign={'center'}
+        variant='h3'
+        sx={{ fontWeight: 'bold' }}
+        gutterBottom
+      >
         Contact Us
       </Typography>
 
-      <Grid container spacing={4} direction={{ xs: 'column', md: 'row' }}>
+      <Box container spacing={4} direction={{ xs: 'column', md: 'row' }}>
         {/* Contact Form Section */}
-        <Grid item xs={12} md={6}>
+        <Box item xs={12} md={6}>
           <form onSubmit={handleSubmit}>
             <TextField
               label='Name'
@@ -209,10 +214,10 @@ const ContactMap = () => {
               Send Message
             </Button>
           </form>
-        </Grid>
+        </Box>
 
         {/* Map Section */}
-        <Grid item xs={12} md={6}>
+        <Box item xs={12} md={6}>
           <Box
             sx={{
               width: '100%',
@@ -264,8 +269,8 @@ const ContactMap = () => {
               </MapContainer>
             </Box>
           </Box>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };
