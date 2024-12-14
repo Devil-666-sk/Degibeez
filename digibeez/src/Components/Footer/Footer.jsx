@@ -20,6 +20,8 @@ const Footer = () => {
     { title: 'About Us', href: '#' },
     { title: 'Services', href: '#' },
     { title: 'Contact', href: '#' },
+    { title: 'Terms & Conditions', href: '#' },
+    { title: 'Privacy Policy', href: '#' },
   ];
   const SEOLinks = [
     { title: 'SEO Services', href: '#' },
@@ -104,7 +106,7 @@ const Footer = () => {
                 </Typography>
                 {renderLinks(quickLinks)}
               </Grid>
-              <Grid ml={'54px'} item xs={6} sm={3}>
+              <Grid ml={'30px'} item xs={6} sm={3}>
                 <Typography variant='subtitle1' sx={{ mb: 1 }}>
                   SEO
                 </Typography>

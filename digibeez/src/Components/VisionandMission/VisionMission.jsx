@@ -134,9 +134,9 @@ const VisionMission = () => {
               sx={{
                 fontWeight: 'bold',
                 mb: 3,
-                fontSize: { xs: '1.4rem', md: '2rem' },
+                fontSize: { xs: '1.3rem', md: '2rem' },
                 mt:2,
-                mx:{xs:8}
+                
               
               }}
             >
