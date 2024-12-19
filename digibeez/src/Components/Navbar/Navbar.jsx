@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import DigiIcon from '../../assets/Digiicon.png';
+import Digi from '../../assets/Digiicon.png';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About Us', 'Career', 'Contact'];
@@ -29,7 +29,7 @@ function Navbar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Box
         component='img'
-        // src={DigiIcon}
+        src={Digi}
         alt='Digilogo'
         sx={{
           height: { xs: 70, sm: 80, md: 50 },
@@ -76,7 +76,7 @@ function Navbar(props) {
           </IconButton>
           <Box
             component='img'
-            src={DigiIcon}
+            src={Digi}
             alt='Logo'
             sx={{
               height: { xs: 70, sm: 80, md: 90 },
