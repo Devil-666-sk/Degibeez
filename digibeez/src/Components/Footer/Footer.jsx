@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { Facebook, Twitter, LinkedIn } from '@mui/icons-material';
-import Digi from '../../assets/NavbarLogo/DigiBeezIcon.png';
+import Digi from '../../assets/NavbarLogo/DigiIcon.png';
 
 const Footer = () => {
   const theme = useTheme();
