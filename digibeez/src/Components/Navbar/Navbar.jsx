@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import DigiIcon from '../../assets/NavbarLogo/DigiBeezICon.png';
+import DigiIcon from '../../assets/NavbarLogo/DigiICon.png';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About Us', 'Career', 'Contact'];
@@ -30,7 +30,7 @@ function Navbar(props) {
       <Box
         component='img'
         src={DigiIcon}
-        alt='Logo'
+        alt='Digilogo'
         sx={{
           height: { xs: 70, sm: 80, md: 50 },
           width: 'auto',
